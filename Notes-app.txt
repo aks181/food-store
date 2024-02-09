@@ -1,0 +1,11 @@
+> Before building always plan your app, visualize it using wire-frames, mockups, designs etc
+> Lay out a basic component structure/hierarchy
+> Passing a props to a component is same as passing an argument to a function  
+> props is an object
+> pass any number of props and use as props in the comp 
+> Config driven UI - website driven UI/data/configuration (diff UI based on diff parameters) 
+> props can be used as props object or destructure on the fly or destructure in component
+
+> use map instead of for loop to render lists
+> use a unique key for each list item mandatorily as it helps react to uniquely identify each element so that when lists are modified, older elements are not rerendered, only new ones are rendered
+> if no unique key is available then index can be used as key but it is not recommended
