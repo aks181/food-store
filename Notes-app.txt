@@ -1,4 +1,6 @@
 > Before building always plan your app, visualize it using wire-frames, mockups, designs etc
+
+> Comments in JSX can be written using {/*   */}
 > Lay out a basic component structure/hierarchy
 > Passing a props to a component is same as passing an argument to a function  
 > props is an object
@@ -9,3 +11,26 @@
 > use map instead of for loop to render lists
 > use a unique key for each list item mandatorily as it helps react to uniquely identify each element so that when lists are modified, older elements are not rerendered, only new ones are rendered
 > if no unique key is available then index can be used as key but it is not recommended
+> use index only and only if list is static, contents are fixed with no possible addition/deletion/modification and a unique id is not present in data
+
+
+/******** Assg -4 ***************/
+> <React.Fragment></React.Fragment> can be used to enclose multiple elements if we want to return them from one component without adding extra dom nodes like divs. e.g. a Columns component will return multiple <td>s so they can be enclosed within or <></>. Only key attribute can be used and that too with React.Fragment
+
+Ep.5--
+> follow any type of folder structure which suits your needs and organizes well
+> Components files can be inside components folder but should start with a capital letter and SHOULD/CAN match the component name
+> extension can be .js or .jsx, similarly while importing u can write/avoid .js/.jsx
+> Imports/Exports 2 types-
+    1. Default import/Exports
+    (can be only 1 in a file)
+
+    export default ComponentName
+    import ComponentName from "path";
+
+    22. Named import/export
+    (used when multiple exports are needed from same file)
+
+    export const VARIABLE_1 = __ ;
+    export const VARIABLE_2 = ** ;
+    import { VARIABLE_1 } from "path";
