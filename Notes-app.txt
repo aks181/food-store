@@ -34,3 +34,46 @@ Ep.5--
     export const VARIABLE_1 = __ ;
     export const VARIABLE_2 = ** ;
     import { VARIABLE_1 } from "path";
+
+> We can do both Named and default exports from same file.
+
+> We can use onClick, onMouseEnter etc events on elements like onClick={() => {callback function JS code}}
+
+/*********************************** HOOKS **************/
+
+> React is good at rendering, rerendering and dom manipulations
+
+> Hook is a normal JS utility function 
+> If we modify a list stored in a normal JS variable(e.g.filter), the variable's value changes but it is not reflected on the UI.
+> State is a super powerful variable which is created as
+    const [listOfHotels, setListOfHotels] = useState([])
+    useState takes default value of the state variable
+> If we update the list using a state variable then it automatically refreshes/updates the UI(render) provided that we update the value using the set function ONLY(This triggers diff algorithm).
+UI is kept in sync with the data(ui layer and data layer). => When a state variable updates, then react rerenders the component.
+> useState basically returns an array whose arr[0]= listOfHotels and arr[1]=setListOfHotels (we just use array destructuring on the fly)
+
+=> Reconciliation Algorithm (React Fiber came in R16) - 
+- Virtual DOM - is representation of actual DOM ( JS object created by a component )
+- Diff Algorithm calculates diff between old and new virtual DOM and then updates the DOM
+- React efficiently keeps track of all DOM nodes and using their corresponding objects(virtual dom for React) compares the changes and updates the UI
+- Reconciliation is the process by which VDOM is kept in sync with the real DOM by a library like ReactDOM
+- Apart from React elements, react also uses internal objects(fibers) to hold additional info about the component tree.
+
+========================= EP 6- Explore the world ====================
+> Monolith vs Microservices architecture
+In Monolith, all the services exist within one single massive project, all backend, database, UI, auth etc and for even small change the whole project is built and deployed.
+In microservices, all services are standalone in themselves having their own tech stack and functionality, and interact with each other to form a complete application. This is known as separation of concerns or single responsibility principle. These services operate on different ports and all these ports are connected to the backend 
+
+=> Approaches to fetch data from any API
+    1. Load the app -> fetch the data(wait till it comes) -> render the UI
+    2. Load the app -> Render the UI -> fetch the data -> rerender the UI
+In React, we will follow 2 as it provides better UX
+
+=> useEffect Hook -
+    useEffect(); --function
+    useEffect(a,b); --takes 2 arguments
+    useEffect(() => {
+        //callback function
+    }, [])          --first is a callback function, 2nd is a dependency array
+
+    This useEffect hook callback function code is run AFTER the component has rendered.

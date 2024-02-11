@@ -45,12 +45,6 @@ const resList = [
         header: "10% OFF",
         subHeader: "UPTO ₹40",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -63,15 +57,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/curry-leaf-modipuram-pallavpuram-meerut-673588",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -111,12 +101,6 @@ const resList = [
         subHeader: "ABOVE ₹299",
         discountTag: "FLAT DEAL",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -129,15 +113,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/dominos-pizza-melange-mall-pallavpuram-meerut-95764",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -178,12 +158,6 @@ const resList = [
         header: "ITEMS",
         subHeader: "AT ₹179",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -196,15 +170,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/pizza-hut-block-a-pallavpuram-meerut-508857",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -263,12 +233,6 @@ const resList = [
         subHeader: "ABOVE ₹249",
         discountTag: "FLAT DEAL",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -281,15 +245,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/pizza-king-phase-1-pallavpuram-meerut-177446",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -351,12 +311,6 @@ const resList = [
           textExtendedBadges: {},
         },
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -369,15 +323,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/bikanervala-bypass-road-pallavpuram-meerut-219639",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -436,12 +386,6 @@ const resList = [
         subHeader: "ABOVE ₹249",
         discountTag: "FLAT DEAL",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
         differentiatedUiMediaDetails: {
@@ -454,150 +398,11 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
       link: "https://www.swiggy.com/restaurants/pinki-chole-bhandar-boundary-road-lal-kurti-meerut-96483",
-      text: "RESTAURANT_MENU",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
-  },
-  {
-    info: {
-      id: "220119",
-      name: "La Pino'z Pizza",
-      cloudinaryImageId: "qmax6qmqmeo9ofs46v47",
-      locality: "Block I",
-      areaName: "Shastri Nagar",
-      costForTwo: "₹200 for two",
-      cuisines: ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
-      avgRating: 4,
-      parentId: "4961",
-      avgRatingString: "4.0",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 64,
-        lastMileTravel: 14.1,
-        serviceability: "SERVICEABLE",
-        slaString: "60-65 mins",
-        lastMileTravelString: "14.1 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-02-09 23:00:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "₹125 OFF",
-        subHeader: "ABOVE ₹649",
-        discountTag: "FLAT DEAL",
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-    },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
-    cta: {
-      link: "https://www.swiggy.com/restaurants/la-pinoz-pizza-block-i-shastri-nagar-meerut-220119",
-      text: "RESTAURANT_MENU",
-      type: "WEBLINK",
-    },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
-  },
-  {
-    info: {
-      id: "650305",
-      name: "KFC",
-      cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
-      locality: "Sector 3\n",
-      areaName: "Meerut Cantt",
-      costForTwo: "₹400 for two",
-      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-      avgRating: 4.1,
-      parentId: "547",
-      avgRatingString: "4.1",
-      totalRatingsString: "500+",
-      sla: {
-        deliveryTime: 54,
-        lastMileTravel: 13.3,
-        serviceability: "SERVICEABLE",
-        slaString: "50-55 mins",
-        lastMileTravelString: "13.3 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-02-10 01:00:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "40% OFF",
-        subHeader: "UPTO ₹80",
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-    },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
-    cta: {
-      link: "https://www.swiggy.com/restaurants/kfc-sector-3-meerut-cantt-meerut-650305",
-      text: "RESTAURANT_MENU",
-      type: "WEBLINK",
-    },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
   {
     info: {
@@ -638,11 +443,60 @@ const resList = [
         header: "ITEMS",
         subHeader: "AT ₹129",
       },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/burger-king-down-town-meerut-meerut-656187",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "113499",
+      name: "Arora's Bakers and Snacks",
+      cloudinaryImageId: "xkm4ykjlhv1xp1qrmq1d",
+      locality: "Puspak Kunj",
+      areaName: "Civil Lines, Saket",
+      costForTwo: "₹199 for two",
+      cuisines: ["Bakery", "Snacks"],
+      avgRating: 4.2,
+      veg: true,
+      parentId: "15479",
+      avgRatingString: "4.2",
+      totalRatingsString: "5K+",
+      sla: {
+        deliveryTime: 42,
+        lastMileTravel: 10.6,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "10.6 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
       },
       differentiatedUi: {
         displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
@@ -656,15 +510,734 @@ const resList = [
       displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       restaurantOfferPresentationInfo: {},
     },
-    analytics: {
-      context: "seo-data-772a3669-844b-4e5f-93cc-9c58967b2824",
-    },
+    analytics: {},
     cta: {
-      link: "https://www.swiggy.com/restaurants/burger-king-down-town-meerut-meerut-656187",
-      text: "RESTAURANT_MENU",
+      link: "https://www.swiggy.com/restaurants/aroras-bakers-and-snacks-puspak-kunj-civil-lines-saket-meerut-113499",
       type: "WEBLINK",
     },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+  },
+  {
+    info: {
+      id: "136458",
+      name: "Ram Lal Chole Bhature (D.N.College)",
+      cloudinaryImageId: "db8kfrsbgojxnsqcmgre",
+      locality: "City Railway Station ROAd",
+      areaName: "OPPOSITE D.N COLLAGE",
+      costForTwo: "₹150 for two",
+      cuisines: ["North Indian", "Indian", "Street Food"],
+      avgRating: 4.2,
+      veg: true,
+      parentId: "15381",
+      avgRatingString: "4.2",
+      totalRatingsString: "1K+",
+      sla: {
+        deliveryTime: 48,
+        lastMileTravel: 10.5,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "10.5 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 17:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "60% OFF",
+        subHeader: "UPTO ₹120",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/ram-lal-chole-bhature-d-n-college-city-railway-station-road-opposite-d-n-collage-meerut-136458",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "709560",
+      name: "Starbucks Coffee",
+      cloudinaryImageId: "182191ab163770437b62861a6f987709",
+      locality: "Mawana Rd",
+      areaName: "Downtown",
+      costForTwo: "₹400 for two",
+      cuisines: [
+        "Beverages",
+        "Cafe",
+        "Snacks",
+        "Desserts",
+        "Bakery",
+        "Ice Cream",
+      ],
+      avgRating: 4.5,
+      parentId: "195515",
+      avgRatingString: "4.5",
+      totalRatingsString: "50+",
+      sla: {
+        deliveryTime: 45,
+        lastMileTravel: 9.8,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "9.8 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 22:45:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/starbucks-coffee-mawana-rd-downtown-meerut-709560",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "762410",
+      name: "Baap Of Rolls",
+      cloudinaryImageId: "1c911da2b6ebfd3556965dc1ea1133d3",
+      locality: "Begum Bridge Road",
+      areaName: "Meerut Cantt",
+      costForTwo: "₹199 for two",
+      cuisines: ["Snacks", "Beverages", "Chinese"],
+      avgRating: 4.3,
+      parentId: "14310",
+      avgRatingString: "4.3",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 44,
+        lastMileTravel: 8.9,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "8.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-10 00:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      isNewlyOnboarded: true,
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/baap-of-rolls-begum-bridge-road-meerut-cantt-meerut-762410",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "386420",
+      name: "Hira Sweets",
+      cloudinaryImageId: "h5sl5hm2wzd8tqdhtphd",
+      locality: "Krishna Puri Road",
+      areaName: "Civil Line",
+      costForTwo: "₹300 for two",
+      cuisines: ["North Indian", "Chinese", "Sweets"],
+      avgRating: 4.3,
+      veg: true,
+      parentId: "5155",
+      avgRatingString: "4.3",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 45,
+        lastMileTravel: 9.6,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "9.6 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "₹125 OFF",
+        subHeader: "ABOVE ₹249",
+        discountTag: "FLAT DEAL",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/hira-sweets-krishna-puri-road-civil-line-meerut-386420",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "624663",
+      name: "Rollsking",
+      cloudinaryImageId: "zjiqjc29v1nm1wsejldt",
+      locality: "Western Kutchery Road",
+      areaName: "Thapar Nagar",
+      costForTwo: "₹250 for two",
+      cuisines: ["North Indian", "Fast Food", "Beverages"],
+      avgRating: 4.1,
+      parentId: "4697",
+      avgRatingString: "4.1",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 48,
+        lastMileTravel: 9.4,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "9.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/rollsking-western-kutchery-road-thapar-nagar-meerut-624663",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "214395",
+      name: "Baskin Robbins - Ice Cream Desserts",
+      cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
+      locality: "Chobey Compound",
+      areaName: "Mohan Puri",
+      costForTwo: "₹300 for two",
+      cuisines: ["Desserts", "Ice Cream"],
+      avgRating: 4.5,
+      veg: true,
+      parentId: "5588",
+      avgRatingString: "4.5",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 46,
+        lastMileTravel: 9.7,
+        serviceability: "SERVICEABLE",
+        slaString: "45-50 mins",
+        lastMileTravelString: "9.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "30% OFF",
+        subHeader: "UPTO ₹75",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-chobey-compound-mohan-puri-meerut-214395",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "706235",
+      name: "Kwality Walls Frozen Dessert and Ice Cream Shop",
+      cloudinaryImageId: "b96645b1734207da9fe120af350c9dea",
+      locality: "Near krishna Madir Thapar Nagar",
+      areaName: "Meerut Cantt",
+      costForTwo: "₹200 for two",
+      cuisines: ["Desserts", "Ice Cream", "Ice Cream Cakes"],
+      avgRating: 4.6,
+      veg: true,
+      parentId: "582",
+      avgRatingString: "4.6",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 41,
+        lastMileTravel: 9.2,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "9.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 22:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "40% OFF",
+        subHeader: "UPTO ₹80",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/kwality-walls-frozen-dessert-and-ice-cream-shop-near-krishna-madir-thapar-nagar-meerut-cantt-meerut-706235",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "644274",
+      name: "Grill Masters",
+      cloudinaryImageId: "d1f427e88dde5cc6fb1a6eae2f56a700",
+      locality: "Salarpur",
+      areaName: "Meerut Cantt",
+      costForTwo: "₹250 for two",
+      cuisines: ["Indian"],
+      avgRating: 4.2,
+      veg: true,
+      parentId: "19537",
+      avgRatingString: "4.2",
+      totalRatingsString: "500+",
+      sla: {
+        deliveryTime: 54,
+        lastMileTravel: 10.2,
+        serviceability: "SERVICEABLE",
+        slaString: "50-55 mins",
+        lastMileTravelString: "10.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:15:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "₹125 OFF",
+        subHeader: "ABOVE ₹249",
+        discountTag: "FLAT DEAL",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/grill-masters-salarpur-meerut-cantt-meerut-644274",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "472396",
+      name: "AMB Snacks and sweets",
+      cloudinaryImageId: "p8hgb00ga69uy2qveq70",
+      locality: "Phase 1",
+      areaName: "Pallavpuram",
+      costForTwo: "₹300 for two",
+      cuisines: ["North Indian", "Sweets", "Snacks", "Chinese", "South Indian"],
+      avgRating: 4.1,
+      veg: true,
+      parentId: "283620",
+      avgRatingString: "4.1",
+      totalRatingsString: "500+",
+      sla: {
+        deliveryTime: 26,
+        lastMileTravel: 1.8,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "1.8 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 22:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/amb-snacks-and-sweets-phase-1-pallavpuram-meerut-472396",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "564501",
+      name: "Vadilal Ice Creams",
+      cloudinaryImageId: "rf1ugowdrlu2ozublq4i",
+      locality: "Sadar Bazaar",
+      areaName: "Meerut Cantt",
+      costForTwo: "₹200 for two",
+      cuisines: ["Ice Cream", "Desserts"],
+      avgRating: 4.6,
+      veg: true,
+      parentId: "11745",
+      avgRatingString: "4.6",
+      totalRatingsString: "100+",
+      sla: {
+        deliveryTime: 44,
+        lastMileTravel: 8.9,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "8.9 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-10 04:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/vadilal-ice-creams-sadar-bazaar-meerut-cantt-meerut-564501",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "95007",
+      name: "Delhi Darbar",
+      cloudinaryImageId: "e8mvwtexdxzsmlkjohwu",
+      locality: "Hapur Road",
+      areaName: "Shastri Nagar",
+      costForTwo: "₹299 for two",
+      cuisines: ["Mughlai", "Tandoor", "North Indian", "Snacks", "Indian"],
+      avgRating: 4.2,
+      parentId: "3908",
+      avgRatingString: "4.2",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 57,
+        lastMileTravel: 10.5,
+        serviceability: "SERVICEABLE",
+        slaString: "55-60 mins",
+        lastMileTravelString: "10.5 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:00:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "FREE ITEM",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/delhi-darbar-hapur-road-shastri-nagar-meerut-95007",
+      type: "WEBLINK",
+    },
+  },
+  {
+    info: {
+      id: "345150",
+      name: "Nazeer Foods",
+      cloudinaryImageId: "6aa38b251b1ee1662961a6dc19e41e95",
+      locality: "Sotiganj",
+      areaName: "Meerut Cantt",
+      costForTwo: "₹400 for two",
+      cuisines: ["North Indian", "Mughlai"],
+      avgRating: 4,
+      parentId: "2351",
+      avgRatingString: "4.0",
+      totalRatingsString: "1K+",
+      sla: {
+        deliveryTime: 45,
+        lastMileTravel: 9.5,
+        serviceability: "SERVICEABLE",
+        slaString: "40-45 mins",
+        lastMileTravelString: "9.5 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-02-09 23:59:00",
+        opened: true,
+      },
+      badges: {},
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {},
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "30% OFF",
+        subHeader: "UPTO ₹75",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/nazeer-foods-sotiganj-meerut-cantt-meerut-345150",
+      type: "WEBLINK",
+    },
   },
 ];
 
