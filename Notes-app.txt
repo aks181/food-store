@@ -13,6 +13,10 @@
 > if no unique key is available then index can be used as key but it is not recommended
 > use index only and only if list is static, contents are fixed with no possible addition/deletion/modification and a unique id is not present in data
 
+✅when using images in react mostly local images stored at some path, they dont render by just specifying the path(both with parcel and webpack), to load them either - 
+    1-> do path={require('../../imgPAth.jpg")}
+    2-> const url = new URL('../imgpath', import.meta.url); 
+    img src={url}
 
 /******** Assg -4 ***************/
 > <React.Fragment></React.Fragment> can be used to enclose multiple elements if we want to return them from one component without adding extra dom nodes like divs. e.g. a Columns component will return multiple <td>s so they can be enclosed within or <></>. Only key attribute can be used and that too with React.Fragment
@@ -51,6 +55,9 @@ Ep.5--
 > If we update the list using a state variable then it automatically refreshes/updates the UI(render) provided that we update the value using the set function ONLY(This triggers diff algorithm).
 UI is kept in sync with the data(ui layer and data layer). => When a state variable updates, then react rerenders the component.
 > useState basically returns an array whose arr[0]= listOfHotels and arr[1]=setListOfHotels (we just use array destructuring on the fly)
+> no use of useState outside component - also throws error- since it is used to create local state variables inside function component
+> declare all useState hooks at the top
+> don't use useState inside conditions, for loops, inside functions like if(valid but not to be done)
 
 => Reconciliation Algorithm (React Fiber came in R16) - 
 - Virtual DOM - is representation of actual DOM ( JS object created by a component )
@@ -77,3 +84,20 @@ In React, we will follow 2 as it provides better UX
     }, [])          --first is a callback function, 2nd is a dependency array
 
     This useEffect hook callback function code is run AFTER the component has rendered.
+
+⭐=> dependency array is not mandatory only callback function is mandatory. 3 cases-
+    1. useEffect(() => { //... }) ==> no dep array, so function will be executed after every    render
+    2. useEffect(() => { //... }, []) ==> empty dep array, so function will be executed ONLY after first/initial render
+    3. useEffect(() => { // ... }, [dependencyVariable]) ==> called after initial and after every time dependencyVariable changes
+
+- Conditional rendering - rendering based on some condition. e.g. Shimmer UI
+- when any local state variable is updated, react triggers a reconciliation cycle and the WHOLE component is rerendered (component function is called again), and not just the changing thing e.g. if login btn changes to logout in complete header, not just btn but whole component rerenders
+- when setStateVariable is called, it rerenders the whole component with a new stateVariable which is a new stateVariable different from previous i.e. why we destructure useState using const 
+
+========================= EP 7 - Routing ====================
+> library is react-router-dom (latest v is 6.11+) - also 5 was majorly used before
+> first we import createBrowserRouter in our app component
+> this createBrowserRouter takes in a config which is an array of objects, in which each object corresponds to a route and the component that needs to be displayed on the route (Component name is written as is not </> notation)
+> it also provides a RouterProvider component that provides our routes to the app and renders them
+> to handle unknown routes, a config object can also have errorElement which specifies the component to render on error (Component name has to be in component notation)
+> useRouterError() is a hook provided by react-router-dom which tells details about the error and can be used for better error handling ux

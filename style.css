@@ -18,9 +18,15 @@ body {
   border-top: 0;
 }
 
+.logo-container {
+  overflow: hidden;
+}
+
 .logo {
   width: 64px;
   height: 64px;
+  transform: scale(1.5);
+  transform-origin: center;
 }
 
 .nav-links {
@@ -32,6 +38,17 @@ body {
   list-style: none;
   font-size: 24px;
   padding: 12px 32px;
+}
+
+.nav-links > li:last-child {
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 8px 32px;
+  cursor: pointer;
+  user-select: none;
+}
+.nav-links > li:last-child:hover {
+  color: #d04a02;
 }
 
 .search-bar-container {
@@ -93,7 +110,7 @@ body {
 .filters-container {
   display: flex;
   justify-content: center;
-  margin: 24px 0;
+  margin: 16px 0 24px;
 }
 
 .filter-btn {
@@ -108,4 +125,81 @@ body {
 
 .filter-btn-active {
   background-color: #cdcdcd70;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+
+.shimmer-card {
+  width: 250px;
+  height: 295px;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 3px 3px 4px 0 rgba(165, 165, 165, 0.342);
+  padding: 8px 8px;
+
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #f6f6f6 8%, #e4e4e4 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+#search {
+  width: 514px;
+  height: 40px;
+  padding: 20px;
+  padding-left: 16px;
+  font-size: 16px;
+  color: #6c6c6c;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid #d2d2d2;
+  margin-right: 2px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+.search-btn {
+  border-radius: 0 8px 8px 0;
+  color: rgba(89, 89, 89, 0.832);
+  padding: 6.5px 12px;
+  font-size: 10px;
+  cursor: pointer;
+  border: 2px solid #dfdfdf;
+  background-color: #eaeaea7e;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-img {
+  height: 300px;
+  width: 575px;
+  margin-bottom: 16px;
 }

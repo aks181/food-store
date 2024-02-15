@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import resList from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filterSelected, setFilterSelected] = useState(false);
+  const [searchResultList, setSearchResultList] = useState([]);
+
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -18,11 +22,39 @@ const Body = () => {
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setSearchResultList(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   return (
     <div className="main-container">
-      <div className="search-bar-container">Search</div>
+      <div className="search-bar-container">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search Restaurants..."
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+            console.log(e.target.value);
+          }}
+        />
+
+        <button
+          type="button"
+          className="search-btn"
+          onClick={() => {
+            const searchResults = listOfRestaurants.filter((res) =>
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setSearchResultList(searchResults);
+          }}
+        >
+          <i className="material-icons">search</i>
+        </button>
+      </div>
       <div className="filters-container">
         <span
           className={
@@ -45,11 +77,15 @@ const Body = () => {
           Ratings 4.2+
         </span>
       </div>
-      <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
+      {listOfRestaurants?.length === 0 ? (
+        <Shimmer></Shimmer>
+      ) : (
+        <div className="res-container">
+          {searchResultList.map((restaurant) => (
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
