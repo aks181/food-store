@@ -17,6 +17,8 @@
     1-> do path={require('../../imgPAth.jpg")}
     2-> const url = new URL('../imgpath', import.meta.url); 
     img src={url}
+    3-> import logo from '../../filepath.jps'
+    img src={logo}
 
 /******** Assg -4 ***************/
 > <React.Fragment></React.Fragment> can be used to enclose multiple elements if we want to return them from one component without adding extra dom nodes like divs. e.g. a Columns component will return multiple <td>s so they can be enclosed within or <></>. Only key attribute can be used and that too with React.Fragment
@@ -55,9 +57,13 @@ Ep.5--
 > If we update the list using a state variable then it automatically refreshes/updates the UI(render) provided that we update the value using the set function ONLY(This triggers diff algorithm).
 UI is kept in sync with the data(ui layer and data layer). => When a state variable updates, then react rerenders the component.
 > useState basically returns an array whose arr[0]= listOfHotels and arr[1]=setListOfHotels (we just use array destructuring on the fly)
+
+=> Best practices related to hooks :- 
 > no use of useState outside component - also throws error- since it is used to create local state variables inside function component
 > declare all useState hooks at the top
 > don't use useState inside conditions, for loops, inside functions like if(valid but not to be done)
+> Don't create component inside component
+> useEffect can be used multiple times in a component
 
 => Reconciliation Algorithm (React Fiber came in R16) - 
 - Virtual DOM - is representation of actual DOM ( JS object created by a component )
@@ -101,3 +107,8 @@ In React, we will follow 2 as it provides better UX
 > it also provides a RouterProvider component that provides our routes to the app and renders them
 > to handle unknown routes, a config object can also have errorElement which specifies the component to render on error (Component name has to be in component notation)
 > useRouterError() is a hook provided by react-router-dom which tells details about the error and can be used for better error handling ux
+
+> Child routes - sub routes for a path
+> Outlet - just like <router-outlet> - gets replaced by component as per route
+> Link - makes anything a link, instead of a href we use Link to="route"
+> client-side routing - what we do on react vs server side routing what we do in normal web pages
