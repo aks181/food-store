@@ -3,6 +3,7 @@ import resList from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -19,6 +20,9 @@ const Body = () => {
     const data = await fetch(API_URL);
 
     const json = await data.json();
+    console.log(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -38,7 +42,6 @@ const Body = () => {
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
-            console.log(e.target.value);
           }}
         />
 
@@ -82,7 +85,12 @@ const Body = () => {
       ) : (
         <div className="res-container">
           {searchResultList.map((restaurant) => (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+            <Link
+              key={restaurant.info.id}
+              to={"/restaurant/" + restaurant.info.id}
+            >
+              <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+            </Link>
           ))}
         </div>
       )}

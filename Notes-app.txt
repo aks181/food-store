@@ -99,11 +99,13 @@ In React, we will follow 2 as it provides better UX
 - Conditional rendering - rendering based on some condition. e.g. Shimmer UI
 - when any local state variable is updated, react triggers a reconciliation cycle and the WHOLE component is rerendered (component function is called again), and not just the changing thing e.g. if login btn changes to logout in complete header, not just btn but whole component rerenders
 - when setStateVariable is called, it rerenders the whole component with a new stateVariable which is a new stateVariable different from previous i.e. why we destructure useState using const 
+- to show fetched data on UI, u will need state variables
 
 ========================= EP 7 - Routing ====================
 > library is react-router-dom (latest v is 6.11+) - also 5 was majorly used before
 > first we import createBrowserRouter in our app component
 > this createBrowserRouter takes in a config which is an array of objects, in which each object corresponds to a route and the component that needs to be displayed on the route (Component name is written as is not </> notation)
+> we can also use element to specify component but then write in <>
 > it also provides a RouterProvider component that provides our routes to the app and renders them
 > to handle unknown routes, a config object can also have errorElement which specifies the component to render on error (Component name has to be in component notation)
 > useRouterError() is a hook provided by react-router-dom which tells details about the error and can be used for better error handling ux
@@ -112,3 +114,6 @@ In React, we will follow 2 as it provides better UX
 > Outlet - just like <router-outlet> - gets replaced by component as per route
 > Link - makes anything a link, instead of a href we use Link to="route"
 > client-side routing - what we do on react vs server side routing what we do in normal web pages
+
+> Link element at the end is an <a href> on UI
+> key attrib should always be on the parent element that is rendered using map
