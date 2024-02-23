@@ -100,6 +100,10 @@ In React, we will follow 2 as it provides better UX
 - when any local state variable is updated, react triggers a reconciliation cycle and the WHOLE component is rerendered (component function is called again), and not just the changing thing e.g. if login btn changes to logout in complete header, not just btn but whole component rerenders
 - when setStateVariable is called, it rerenders the whole component with a new stateVariable which is a new stateVariable different from previous i.e. why we destructure useState using const 
 - to show fetched data on UI, u will need state variables
+- useEffect also returns a callback function which can be used to create a cleanup like thing like we do in componentWillUnmount
+- simply return () => {
+    //clean up code
+}
 
 ========================= EP 7 - Routing ====================
 > library is react-router-dom (latest v is 6.11+) - also 5 was majorly used before
@@ -117,3 +121,74 @@ In React, we will follow 2 as it provides better UX
 
 > Link element at the end is an <a href> on UI
 > key attrib should always be on the parent element that is rendered using map
+
+============================ EP 7 - Class based components ====================
+
+> Class based components -
+  - Are a JS class
+  - extend React.Component to behave like a component
+  - have a render() method which return a piece od JSX
+  - similar to invoking a function, for a class its instance is created
+  - so when a class based component is rendered, its instance is mounted to the UI
+  - constructor is always called once and first when instantiating a class and then render is called 
+  - props are received in the constructor
+  - super(props) is required to make these props accessible throughout the class
+  - By using the super constructor with a props argument, the component is able to inherit the properties of the parent component and also access the new props that have been passed in. This allows the component to make use of the properties of both the parent component and the new props in its render method.
+  - by using super(props), props can be used with 'this' inside the constructor.
+  - state is set in constructor as a state object
+  - unlike multiple useState hooks, all state variables are set in a single object
+  - state Variables are accessible by this.state.variableName
+  - Never update state variables directly
+  - use this.setState({ stateVariableName: update}) - takes an object whose key is state variable name without this.state and then u can update
+  - use a single setState if you want to modify multiple state variables on a single event
+  - if you  update 2 out of 5 state variables, only those are updates, rest are not touched
+  - First Constructor is called -> then render is called -> componentDidMount is called
+  - even if we have a parent child component composition, order would be Parent Constructor - P render - Child constructor - C render - C componentDidMount - P componentDidMount
+  - componentDidMount is called once component is mounted completely including all children
+  - thats y cdm is ideal for making api calls just like useEffect(()=> {}, [])
+  - react lifecycle has 2 phases (https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+    > render phase ( constructor call and render )
+    > commit phase ( DOM updation & componentDidMount )
+  - So if in case we have 2 or more child elements in a parent, then react will patch their render phase for optimization
+  - So order will be P constructor -> P render -> C1 constructor -> C1 render -> C2 constructor -> C2 render -> C1 CDM -> C2 CDM -> P CDM
+  - Since commit phase(DOM updation) is expensive task, so react batches render phases & commit phase
+
+  - like in functional components to make api calls in class based component, we can do
+    async componentDidMount() {
+        const data = await fetch('url')
+    }
+  - When setState is called it rerenders the component with updated data from the api and after that componentDidUpdate() is called
+  - componentWillUnmount() is called before component is removed from the UI
+  - Never co-relate componentDidMount with useEffect
+  - cdm runs after only initial render and componentDidUpdate runs after every ender(update)
+  - to do something like useEffect with one or two dependency variables, we do
+    componentDidUpdate(prevProps, prevState) {
+        if(this.state.count !== prevState.count || this.state.count2 !== prevState.count2)
+    }
+ - to do different things on diff dep variable change, write multiple if conditions like above
+ - if we start a timer using setInterval in the cdm of a component, then we should clean it up in componentWillUnmount() otherwise interval code will keep on running since it is SPA even if you change routes
+ - same thing we can do in functional component using useEffect
+ - Hooks can only be called inside of the body of a function component.
+
+================================== EP 8 -> Optimizing ================================
+
+> Single responsibility principle - promotes reusability, maintainable, testable
+> write code in modular fashion, clean, light weight
+> Custom hooks - to abstract functionality from component like api calls and all so component has single responsibility of displaying data
+> ⭐  useEffect(() => {
+    fetchData();
+  }, []);  is different from useEffect(()=> fetchData(), [])
+  since second syntax means that you are returning a function, and useEffect can only return a clean up function
+> Breaking our code into logical areas of functionality, related features since bundler keeps all code in 1 js file, and as app grows this js file increases in size thus impacting load times
+    - Chunking
+    - Code splitting
+    - Lazy loading
+    - Dynamic bundling
+    - Dynamic importing
+    - On demand loading
+> Not loading the components(heavy) until they have to be used
+> to lazy load a component, import it dynamically using lazy function by react
+> lazy takes a callback which imports the component
+> But this gives an error as a bundle takes some time to load and react tries to render in that time so gives error
+> So to defer react from rendering until the bundle has loaded we wrap the element in <Supense></Supense>
+> this tag takes a fallback prop to show something in the time the bundle is loaded and rendered

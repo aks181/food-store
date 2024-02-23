@@ -4,13 +4,16 @@ import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
+import useOnlineStatus from "../utils/hooks/useOnlineStatus";
+import InternetError from "./InternetError";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filterSelected, setFilterSelected] = useState(false);
   const [searchResultList, setSearchResultList] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const isOnline = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -30,6 +33,10 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  if (isOnline === false) {
+    return <InternetError />;
+  }
 
   return (
     <div className="main-container">

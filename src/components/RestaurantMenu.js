@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import useRestaurantMenu from "../utils/hooks/useRestaurantMenu";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { ITEM_IMAGE_URL, MENU_URL } from "../utils/constants";
@@ -6,20 +6,9 @@ import Veg_Icon from "../assets/veg.jpg";
 import Nveg_Icon from "../assets/nveg.jpg";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
   let params = useParams();
 
-  const fetchData = async () => {
-    const data = await fetch(MENU_URL + params.id);
-
-    const json = await data.json();
-    setResInfo(json.data);
-    console.log(json.data);
-  };
+  const resInfo = useRestaurantMenu(params.id);
 
   if (resInfo === null) {
     return <Shimmer />;
@@ -33,20 +22,13 @@ const RestaurantMenu = () => {
     name,
     sla,
     totalRatingsString,
-  } = resInfo?.cards[0]?.card?.card?.info;
+  } = resInfo?.cards[2]?.card?.card?.info;
 
-  //   const { title, itemCards } =
-  //     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
   let rec_cards =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
       (card) => card?.card?.card?.type === "CATEGORY_TYPE_RECOMMENDED"
     );
   const { title, itemCards } = rec_cards?.card?.card;
-  //   console.log(
-  //     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
-  //       (card) => card?.card?.card?.title === "Recommended"
-  //     )
-  //   );
 
   return (
     <div className="restaurant-menu-container">
@@ -71,7 +53,9 @@ const RestaurantMenu = () => {
       </div>
 
       <div className="food-menu">
-        <div className="category-header">{title}</div>
+        <div className="category-header">
+          {title} ({itemCards.length})
+        </div>
         <div className="food-menu-items">
           {itemCards.map((item) => {
             const {
