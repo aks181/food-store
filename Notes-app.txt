@@ -192,3 +192,33 @@ In React, we will follow 2 as it provides better UX
 > But this gives an error as a bundle takes some time to load and react tries to render in that time so gives error
 > So to defer react from rendering until the bundle has loaded we wrap the element in <Supense></Supense>
 > this tag takes a fallback prop to show something in the time the bundle is loaded and rendered
+
+================================= EP 9 -> Styling ======================
+> simple css, sass(scss), styled components, Material UI, Chakra UI, Ant Design , Bootstrap, Tailwind css
+> postcss tool to transform css with Js ( tailwind uses postcss)
+> npx tailwind init - creates a tailwind.config.js
+> create .postcssrc and paste a plugin of tailwind
+> any file under src can use tailwind css like html, js, ts, jsx, tsx
+> has class names for pretty much everything
+> works like a charm with tailwind css intellisense
+> if exact pixel required you can write w-[200px]
+> pros - no switching, very light weight with dynamic imports (imports only that css which is required in project absolutely, nothing else, and also single import even if class used 100 times)
+> cons - with more classes on a element, code becomes ugly and less readable
+> hover:bg-gray-200 focus:border (repeat hover/focus for multiple styles)
+> sm:bg-pink lg:bg-yellow
+> dark:bg-gray
+> arbitrary values are given in [], special syntax for box shadow type thing
+> there are some default behaviors that tailwind breaks intentionally like un-styling headings, lists (https://tailwindcss.com/docs/preflight) 
+
+================================= EP 10 -> More features ====================
+> Higher order components - function which takes a component and returns a component 
+> takes a function modifies it and returns it
+> Kind of wrapper functions and are pure functions
+> syntax - const hoComponent = (NormaComponent) = > {
+    return(()=> {                 //returns a component(props are received here)
+            return (                //component returns JSX
+                //JSX
+            )
+        }
+    )
+}

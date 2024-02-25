@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import resList from "../utils/mockData";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withVegLabelRestaurantCard } from "./RestaurantCard";
 import { API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/hooks/useOnlineStatus";
 import InternetError from "./InternetError";
+
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filterSelected, setFilterSelected] = useState(false);
@@ -14,6 +15,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const isOnline = useOnlineStatus();
+
+  const PureVegRestaurantCard = withVegLabelRestaurantCard(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -40,11 +43,12 @@ const Body = () => {
 
   return (
     <div className="main-container">
-      <div className="search-bar-container">
+      <div className="search-bar-container flex justify-center mt-6">
         <input
           type="text"
           name="search"
           id="search"
+          className="w-[514px] h-10 p-5 pl-4 text-base text-[#6c6c6c] rounded-tl-lg rounded-bl-lg border-2 border-solid border-[#d2d2d2] mr-0.5 focus:outline-none"
           placeholder="Search Restaurants..."
           value={searchText}
           onChange={(e) => {
@@ -54,7 +58,7 @@ const Body = () => {
 
         <button
           type="button"
-          className="search-btn"
+          className="search-btn rounded-tr-lg rounded-br-lg text-[rgba(89,89,89,0.832)] pt-[6.5px] px-3 text-xs cursor-pointer border-2 border-solid border-[#dfdfdf] bg-[#eaeaea7e]"
           onClick={() => {
             const searchResults = listOfRestaurants.filter((res) =>
               res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -65,10 +69,11 @@ const Body = () => {
           <i className="material-icons">search</i>
         </button>
       </div>
-      <div className="filters-container">
+      <div className="filters-container flex justify-center mt-4 mx-0 mb-6">
         <span
           className={
-            filterSelected ? "filter-btn filter-btn-active" : "filter-btn"
+            "inline-block py-2 px-3 text-sm text-gray-500 border border-solid border-gray-300 rounded-3xl cursor-pointer " +
+            (filterSelected ? "bg-gray-300 text-gray-600" : "")
           }
           onClick={() => {
             const filteredList = resList.filter((res) => {
@@ -90,13 +95,17 @@ const Body = () => {
       {listOfRestaurants?.length === 0 ? (
         <Shimmer></Shimmer>
       ) : (
-        <div className="res-container">
+        <div className="res-container flex flex-wrap gap-y-4 gap-x-7">
           {searchResultList.map((restaurant) => (
             <Link
               key={restaurant.info.id}
               to={"/restaurant/" + restaurant.info.id}
             >
-              <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+              {!!restaurant.info.veg ? (
+                <PureVegRestaurantCard resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
             </Link>
           ))}
         </div>
