@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import resList from "../utils/mockData";
 import RestaurantCard, { withVegLabelRestaurantCard } from "./RestaurantCard";
 import { API_URL } from "../utils/constants";
@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/hooks/useOnlineStatus";
 import InternetError from "./InternetError";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -15,6 +16,9 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const isOnline = useOnlineStatus();
+
+  const user = useContext(UserContext);
+  // console.log(user);
 
   const PureVegRestaurantCard = withVegLabelRestaurantCard(RestaurantCard);
 
@@ -26,9 +30,9 @@ const Body = () => {
     const data = await fetch(API_URL);
 
     const json = await data.json();
-    console.log(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    // console.log(
+    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    // );
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -43,7 +47,7 @@ const Body = () => {
 
   return (
     <div className="main-container">
-      <div className="search-bar-container flex justify-center mt-6">
+      <div className="search-bar-container flex justify-center mt-8">
         <input
           type="text"
           name="search"
@@ -54,6 +58,13 @@ const Body = () => {
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
+        />
+
+        <input
+          type="text"
+          className="p-5 pl-3 border"
+          value={user.loggedInUser}
+          onChange={(e) => user.setUserName(e.target.value)}
         />
 
         <button

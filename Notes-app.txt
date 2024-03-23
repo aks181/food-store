@@ -222,3 +222,90 @@ In React, we will follow 2 as it provides better UX
         }
     )
 }
+
+> Controlled and Uncontrolled components - If a component is managing its own state and its behavior is not controlled by parent comp -> Uncontrolled
+> if parent managing the state of child comp, then controlled comp eg. accordion example. On other words, if major info is coming as props rather than local state
+> to change parent state from child comp, we can pass setStateVariable function to child as a prop as a reference and there it can be called
+> Lifting state up - when we want to change the state of two comps always together, we remove state from both of them and move it to their closest common parent
+
+> Props drilling - problem of passing down data as props through multiple levels of component hierarchy even though the intermediate ones might not need it and are just used to ship it down
+> e.g. logged in user data, theme data etc - some type of data which might be useful at any level of aur app
+> React context solves the issue of app wide data sharing
+> create a context using createContext(<data>)
+> Use only data that is required app wide in context and not all data
+> use it anywhere using useContext hook by passing that context variable
+> in class based comps, use <ContextName.Consumer>
+{(data) => console.log(data)}
+</ContextName.Consumer>
+> to update the value of context, use <Context.Provider value={updated Data}></Context.Provider> and wrap your components in which you want updated info
+> providers can be nested with different data also and there can be multiple providers
+> when providing value using provider to app, and you want to modify this value from a component, then pass the set method also along(inside) with value and then call this function in the component
+
+//app.js
+ const [userName, setUserName] = useState("");
+  useEffect(() => {
+    setUserName("Akshay Singhal");
+  }, []);
+
+  return (
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
+  );
+};
+
+//component.js
+ const user = useContext(UserContext);
+ or const {setUserName} = useContext(UserContext);
+
+ <input
+        type="text"
+        className="p-5 pl-3 border"
+        value={user.loggedInUser}
+        onChange={(e) => user.setUserName(e.target.value)}
+    />
+> ⭐context updates even that code which is not even loaded(lazy loaded components) when they are loaded they have updated info
+> for small to medium, context is fine, even for large but redux is more popular
+> using provider overrides the default value
+> tying context to a state variable, can update data throughout
+
+
+========================== EP 11 - Redux ===============================================
+
+> redux toolkit - new way to implement redux
+> npm i @reduxjs/toolkit npm i react-redux
+> creating a store - const appStore = configureStore()
+> providing store to application using Provider from react-redux
+  - wrapping whole app in <Provider store={appStore} />
+> creating a cartSlice using createSlice({
+  name: 'cart',
+  initialState: {
+    items: []
+  },
+  reducers: {
+    addItem: (state, action) => {
+      state.items.push(action.payload)
+    },
+    more reducers like this
+  }
+})
+
+- export default cartSlice.reducer
+- export const {addItem, removeItem} = cartSlice.actions
+> now this reducer is imported in to a app store where they are combined to make store level reducer
+> mutating of state is done in reducer functions
+> subscribing to a store using a selector - hook useSelector((store)=> store.cart.items)
+> action creators use useDispatch hook to dispatch the data which is automatically read as payload in reducer functions
+
+
+> whenever using selector to subscribe to the store, only subscribe to the right portion of store to improve performance and also no need to update unrelated components
+> reducers vs reducer
+> vanilla redux - Dont mutate the state and return was mandatory(return new state)
+> toolkit - HAVE to mutate the state, dont return(however redux is using immutable object(immerjs) behind the scenes)
+> console log in redux dont work normally, use current() function
+> RTK- either mutate the state or return a new State
+> Redux dev tools
+> RTK query - new version of redux thunk and middlewares

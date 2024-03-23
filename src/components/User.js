@@ -1,9 +1,10 @@
 import React from "react";
+import UserContext from "../../src/utils/UserContext";
 
 class User extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    // console.log(props);
     this.state = {
       count: 0,
       text: "",
@@ -14,15 +15,18 @@ class User extends React.Component {
     const { name, location } = this.props;
     return (
       <div className="user-card">
-        <span
+        <p
           onClick={() => {
             this.setState({ count: this.state.count + 2 });
           }}
         >
           Name: {name}
-        </span>
-        <span>Location: {location}</span>
-        <span>Count: {this.state.count}</span>
+        </p>
+        <p>Location: {location}</p>
+        <p>Count: {this.state.count}</p>
+        <UserContext.Consumer>
+          {(data) => <p>Logged In User: {data.loggedInUser}</p>}
+        </UserContext.Consumer>
       </div>
     );
   }
