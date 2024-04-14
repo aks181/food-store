@@ -10,14 +10,15 @@ const RestaurantMenu = () => {
   let params = useParams();
 
   let resInfo = useRestaurantMenu(params.id);
+  console.log(resInfo?.cards[0]?.card?.card?.info, "resinfo");
   const dispatch = useDispatch();
-  useEffect(() => {
-    const restDetails = resInfo?.cards[0]?.card?.card?.info;
-    console.log(restDetails);
-    if (restDetails) {
-      dispatch(setCurrentRestaurant(restDetails));
-    }
-  }, [resInfo]);
+  // useEffect(() => {
+  //   const restDetails = resInfo?.cards[0]?.card?.card?.info;
+  //   console.log(restDetails);
+  //   if (restDetails) {
+  //     dispatch(setCurrentRestaurant(restDetails));
+  //   }
+  // }, [resInfo]);
 
   const [showCategoryItems, setShowCategoryItems] = useState(null);
 
@@ -75,6 +76,7 @@ const RestaurantMenu = () => {
             category={category?.card?.card}
             showCategoryItems={showCategoryItems === index ? true : false}
             setShowCategoryItems={() => setShowCategoryItems(index)}
+            restaurantDetails={resInfo?.cards[0]?.card?.card?.info}
           />
         );
       })}

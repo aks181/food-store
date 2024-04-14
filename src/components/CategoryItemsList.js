@@ -6,13 +6,13 @@ import { addItem } from "../utils/cartSlice";
 const veg = new URL("../assets/veg.jpg", import.meta.url);
 const nveg = new URL("../assets/nveg.jpg", import.meta.url);
 
-const CategoryItemsList = ({ items }) => {
+const CategoryItemsList = ({ items, restaurantDetails }) => {
   // console.log(items, "items");
   const dispatch = useDispatch();
 
   const handleAddItem = (addedItem) => {
     console.log(addedItem);
-    dispatch(addItem(addedItem));
+    dispatch(addItem([addedItem, restaurantDetails]));
   };
 
   return (

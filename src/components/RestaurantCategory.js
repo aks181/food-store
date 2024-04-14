@@ -5,6 +5,7 @@ const RestaurantCategory = ({
   category,
   showCategoryItems,
   setShowCategoryItems,
+  restaurantDetails,
 }) => {
   //   console.log(props);
   //   const [showCategoryItems, setShowCategoryItems] = useState(true);
@@ -27,7 +28,12 @@ const RestaurantCategory = ({
           <i className="material-icons">expand_more</i>
         </span>
       </div>
-      {showCategoryItems && <CategoryItemsList items={itemCards} />}
+      {showCategoryItems && (
+        <CategoryItemsList
+          items={itemCards}
+          restaurantDetails={restaurantDetails}
+        />
+      )}
     </div>
   );
 };

@@ -1,7 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
-import { clearCart, deleteItem } from "../utils/cartSlice";
+import {
+  addItem,
+  clearCart,
+  decreaseItem,
+  deleteItem,
+} from "../utils/cartSlice";
+import EmptyCart from "./EmptyCart";
 
 const veg = new URL("../assets/veg.jpg", import.meta.url);
 const nveg = new URL("../assets/nveg.jpg", import.meta.url);
@@ -12,7 +18,7 @@ const Cart = () => {
   const currentRestaurant = useSelector(
     (store) => store.currentRestaurant.currentRestaurant
   );
-  console.log(currentRestaurant);
+  console.log(currentRestaurant, "currentRestro");
   const dispatch = useDispatch();
   deleteCartItem = (itemId) => {
     dispatch(deleteItem(itemId));
@@ -22,26 +28,35 @@ const Cart = () => {
     dispatch(clearCart());
   };
 
+  function getItemsTotal() {
+    let allItemPrice = 0;
+    items.forEach((item) => {
+      const itemPrice =
+        item.item.card.info.price / 100 ||
+        item.item.card.info.defaultPrice / 100;
+      const totalItemPrice = itemPrice * item.quantity;
+      allItemPrice += totalItemPrice;
+    });
+    return allItemPrice;
+  }
+
+  getExtraCharges = (itemsTotalPrice) => {
+    let charges = itemsTotalPrice * 0.05;
+    return +charges.toFixed(2);
+  };
+
+  increaseItem = (item) => {
+    dispatch(addItem(item.item));
+  };
+
+  decreaseItemCount = (itemId) => {
+    dispatch(decreaseItem(itemId));
+  };
+
   return (
     <div className="cart-container flex justify-center mt-6">
       {!items?.length ? (
-        <div className="flex flex-col justify-center items-center w-full">
-          <img
-            src="https://img.freepik.com/free-vector/supermarket-shopping-cart-concept-illustration_114360-22408.jpg"
-            alt="empty-cart-image"
-            width="300px"
-            height="300px"
-            className="mb-4"
-          />
-          <span className="text-red-700 font-bold text-lg mb-8">
-            Your cart is empty :(
-          </span>
-          <Link to="/">
-            <span className="uppercase py-2 px-3 bg-orange-600 text-white font-bold rounded-md cursor-pointer hover:bg-orange-500">
-              See Nearby Restaurants
-            </span>
-          </Link>
-        </div>
+        <EmptyCart />
       ) : (
         <div className="order-summary w-2/3 bg-gray-100 rounded-md shadow-md p-4">
           <div className="text-center">
@@ -89,16 +104,34 @@ const Cart = () => {
                         />
                       )}
                     </span>
-                    <span className="text-sm">{name}</span>
+                    <span className="text-sm pr-3">{name}</span>
                   </div>
-                  <div className="w-3/12 flex justify-between">
-                    <div>{item.quantity}</div>
+                  <div className="w-3/12 flex justify-between items-center">
+                    <div className="flex items-center border border-gray-200 px-1.5 bg-white">
+                      <i
+                        onClick={() => decreaseItemCount(id)}
+                        className="material-icons !text-base !font-bold mr-1.5 text-red-600 cursor-pointer"
+                      >
+                        remove
+                      </i>
+                      {item.quantity}
+                      <i
+                        onClick={() => increaseItem(item)}
+                        className="material-icons !text-base !font-bold ml-1.5 text-green-600 cursor-pointer"
+                      >
+                        add
+                      </i>
+                    </div>
                     <div>
                       ₹
                       {(item.quantity * price) / 100 ||
                         (item.quantity * defaultPrice) / 100}
                     </div>
-                    <button type="button" onClick={() => deleteCartItem(id)}>
+                    <button
+                      type="button"
+                      className="-mb-1.5"
+                      onClick={() => deleteCartItem(id)}
+                    >
                       <i className="material-icons text-red-600">delete</i>
                     </button>
                   </div>
@@ -141,19 +174,24 @@ const Cart = () => {
             <span className="font-bold">Bill Details</span>
             <div className="flex justify-between">
               <span>Item Total</span>
-              <span>₹XX</span>
+              <span>₹{getItemsTotal()}</span>
             </div>
             <div className="flex justify-between">
-              <span>GST and Restaurant Charges</span>
-              <span>₹XX</span>
+              <span>GST and Restaurant Charges (5%)</span>
+              <span>₹{getExtraCharges(getItemsTotal())}</span>
             </div>
             <div className="flex justify-between border-b-2 border-b-black pb-2">
               <span>Delivery Fee</span>
-              <span>₹XX</span>
+              <span>₹{currentRestaurant[0].sla.lastMileTravel * 10}</span>
             </div>
             <div className="flex justify-between my-3 font-semibold">
               <span className="">To Pay</span>
-              <span>₹XX</span>
+              <span>
+                ₹
+                {getItemsTotal() +
+                  getExtraCharges(getItemsTotal()) +
+                  currentRestaurant[0].sla.lastMileTravel * 10}
+              </span>
             </div>
           </div>
         </div>
