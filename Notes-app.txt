@@ -309,3 +309,24 @@ In React, we will follow 2 as it provides better UX
 > RTK- either mutate the state or return a new State
 > Redux dev tools
 > RTK query - new version of redux thunk and middlewares
+
+
+===================================================
+
+MODAL/ POPUP
+> overlay has to be separate otherwise u cant close by clicking on it if it is a wrapper
+> position fixed
+
+OTP Login -
+> regex.test()
+> new Array(length)
+> Array.fill
+> default props values
+> useRef - ref.current
+> using array in state
+> updating state array
+> focus()
+> substring()
+> setSelectionRange()
+>  e.key
+> ref on looped inputs

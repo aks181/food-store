@@ -45,6 +45,11 @@ const Body = () => {
     return <InternetError />;
   }
 
+  handleInput = (e) => {
+    user.setUserName(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <div className="main-container">
       <div className="search-bar-container flex justify-center mt-8">
@@ -64,7 +69,7 @@ const Body = () => {
           type="text"
           className="p-5 pl-3 border"
           value={user.loggedInUser}
-          onChange={(e) => user.setUserName(e.target.value)}
+          onChange={handleInput}
         />
 
         <button

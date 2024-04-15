@@ -3,14 +3,27 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
+import LoginPopup from "./LoginPopup";
 
 const Header = () => {
   let [btnName, setBtnName] = useState("Login");
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
   const user = useContext(UserContext);
   // console.log(user);
 
   const cartItems = useSelector((store) => store.cart.items);
   // console.log(cartItems);
+
+  handleLogin = () => {
+    setShowLoginPopup(true);
+    setBtnName("Logout");
+  };
+
+  closeLoginPopup = () => {
+    setShowLoginPopup(false);
+  };
+
+  document.body.style.overflowY = showLoginPopup ? "hidden" : "auto";
 
   return (
     <div className="header flex justify-between items-center px-6 py-4 rounded-b-lg rounded-br-lg  border-2 border-gray-200 border-t-0 shadow-lg shadow-gray-400">
@@ -41,15 +54,17 @@ const Header = () => {
           <li
             className="nav-link list-none text-base bg-slate-200 rounded-3xl py-2 px-6 cursor-pointer select-none hover:bg-slate-400 hover:text-slate-50"
             onClick={() => {
-              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
+              btnName === "Login" ? handleLogin() : setBtnName("Login");
             }}
           >
             {btnName}
           </li>
+
           <li className="nav-link list-none text-base px-3 py-8">
             {user.loggedInUser}
           </li>
         </ul>
+        {showLoginPopup ? <LoginPopup closePopup={closeLoginPopup} /> : null}
       </div>
     </div>
   );
