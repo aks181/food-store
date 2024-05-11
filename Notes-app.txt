@@ -208,8 +208,11 @@ In React, we will follow 2 as it provides better UX
 > sm:bg-pink lg:bg-yellow
 > dark:bg-gray
 > arbitrary values are given in [], special syntax for box shadow type thing
-> there are some default behaviors that tailwind breaks intentionally like un-styling headings, lists (https://tailwindcss.com/docs/preflight) 
+> there are some default behaviors that tailwind breaks intentionally like un-styling headings, lists (https://tailwindcss.com/docs/preflight)
 
+> custom css can be written in styles.css using @layer
+> before and after can be used as before: after:border-red
+> for conditional styles, use template literal strings
 ================================= EP 10 -> More features ====================
 > Higher order components - function which takes a component and returns a component 
 > takes a function modifies it and returns it

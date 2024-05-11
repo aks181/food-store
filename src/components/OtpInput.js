@@ -18,11 +18,11 @@ const OtpInput = ({ mobileNumber, digits = 6, handleOtpSubmit = () => {} }) => {
     const value = e.target.value;
     const regex = /^[0-9]+$/;
     isValidValue = regex.test(value) || value === "";
-    if (!isValidValue) return; // allow only number input
+    if (!isValidValue) return; // allow only number or blank input
 
     const newOtp = otp.map((x, index) => {
       if (i === index) {
-        x = e.target.value.substring(e.target.value.length - 1);
+        x = e.target.value.substring(e.target.value.length - 1); //takes only last digit of whatever no string we enter
         if (value && i < digits - 1) {
           inputRefs.current[i + 1].focus(); //move focus forward to next field
         }

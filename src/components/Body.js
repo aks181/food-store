@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/hooks/useOnlineStatus";
 import InternetError from "./InternetError";
 import UserContext from "../utils/UserContext";
+import FoodItemsCarousel from "./FoodItemsCarousel";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filterSelected, setFilterSelected] = useState(false);
   const [searchResultList, setSearchResultList] = useState([]);
+  const [foodItemsImageCards, setFoodItemImageCards] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
@@ -30,14 +32,16 @@ const Body = () => {
     const data = await fetch(API_URL);
 
     const json = await data.json();
-    // console.log(
-    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
+
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setSearchResultList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFoodItemImageCards(
+      json?.data?.cards?.find((x) => x?.card?.card?.id === "whats_on_your_mind")
+        ?.card?.card?.imageGridCards?.info
     );
   };
 
@@ -52,6 +56,10 @@ const Body = () => {
 
   return (
     <div className="main-container">
+      <div className="item-carousel-container mt-8 mb-4">
+        <FoodItemsCarousel foodItems={foodItemsImageCards} />
+      </div>
+      <hr />
       <div className="search-bar-container flex justify-center mt-8">
         <input
           type="text"
